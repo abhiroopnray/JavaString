@@ -13,21 +13,23 @@ public class FindMatcher {
 
             if (matcherLength < len1) {
                 if ((str1.substring(i, matcherLength).equals(str2))) {
+                    count = count + 1; //TODO: Needs to check!
 
-                    count = count + 1;
                     System.out.println("Match found: " + true);
                     System.out.println("Matched char: " + str1.charAt(i));
-
                     //Here Builder is used as String is immutable and will create new String changing all the similar values
                     StringBuilder builder = new StringBuilder(str1);
                     //The end index starts from 1 so 1 is added with i
                     builder.replace(i, i + 1, "$");
-                /*str1 = str1.replace(str1.charAt(i), '$');*/
                     System.out.println("Changed string: " + builder);
                     System.out.println("Number of characters needs to be changed: " + count);
-                    //break;
                 }
+
             }
+        }
+        if(count == 0){
+            System.out.println("No substring matched!");
+            System.out.println("Number of characters needs to be changed: " + count);
         }
     }
 }
