@@ -22,7 +22,7 @@ public class FindMatcher {
                     //The end index starts from 1 so 1 is added with i
                     builder.replace(i, i + 1, "$");
                     System.out.println("Changed string: " + builder);
-                    System.out.println("Number of characters needs to be changed: " + count);
+                    System.out.println("Minimum number of characters needs to be changed: " + count);
                 }
 
             }
